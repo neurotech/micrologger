@@ -1,10 +1,11 @@
+const path = require('path');
 const fs = require('fs');
 const pg = require('pg');
 const config = require('../config');
 
 module.exports = {
   schema: (cb) => {
-    const ddl = fs.readFileSync('./sql/ddl.sql', { encoding: 'utf8' });
+    const ddl = fs.readFileSync(path.resolve(__dirname, './sql/ddl.sql', { encoding: 'utf8' }));
     const client = new pg.Client(config);
     client.connect(err => {
       if (err) { cb(err); }
