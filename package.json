@@ -1,6 +1,6 @@
 {
   "name": "pg-micrologger",
-  "version": "1.0.0",
+  "version": "1.0.1",
   "description": "Route your log messages to a PostgreSQL database.",
   "main": "index.js",
   "author": "Tim Douglas <neurotech@gmail.com>",
