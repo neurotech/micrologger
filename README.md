@@ -57,9 +57,9 @@ All `log` methods expect a `data` object, structured as follows:
 ```js
 let data = {
   application: 'Name of the application logging the message.',
-  domain: 'General nature of the operation that generated the message.',
   task: 'Nature of the task that generated the message.',
-  message: 'The message text itself.'
+  message: 'The message text itself.',
+  message_json_data: 'JSON object containing additional pertinent information about the message.'
 };
 ```
 
