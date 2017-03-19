@@ -4,7 +4,7 @@ const config = require('../config');
 
 module.exports = {
   schema: (cb) => {
-    const ddl = fs.readFileSync('./ddl.sql', { encoding: 'utf8' });
+    const ddl = fs.readFileSync('./sql/ddl.sql', { encoding: 'utf8' });
     const client = new pg.Client(config);
     client.connect(err => {
       if (err) { cb(err); }
