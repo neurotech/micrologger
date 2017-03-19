@@ -30,7 +30,7 @@ module.exports = {
   },
   schema: (cb) => {
     const goal = ['critical', 'debug', 'error', 'info', 'warning'];
-    const check = fs.readFileSync(path.resolve(__dirname, './sql/check-schema.sql'), { encoding: 'utf8' });
+    const check = fs.readFileSync(path.resolve(__dirname, '../sql/check-schema.sql'), { encoding: 'utf8' });
     const client = new pg.Client(config);
     client.connect(err => {
       if (err) { cb(err); }
