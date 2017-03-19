@@ -5,19 +5,19 @@ const config = require('../config');
 module.exports = {
   config: (cb) => {
     let checked = {};
-    if (!assert.equal(typeof config.host, 'string', 'Config is missing a value for host')) {
+    if (!assert.equal(typeof config.host, 'string', 'Config is missing a value for host!')) {
       checked.host = 'ok';
     }
-    if (!assert.equal(typeof config.port, 'string', 'Config is missing a value for port')) {
+    if (!assert.equal(typeof config.port, 'string', 'Config is missing a value for port!')) {
       checked.port = 'ok';
     }
-    if (!assert.equal(typeof config.user, 'string', 'Config is missing a value for user')) {
+    if (!assert.equal(typeof config.user, 'string', 'Config is missing a value for user!')) {
       checked.user = 'ok';
     }
-    if (!assert.equal(typeof config.password, 'string', 'Config is missing a value for password')) {
+    if (!assert.equal(typeof config.password, 'string', 'Config is missing a value for password!')) {
       checked.password = 'ok';
     }
-    if (!assert.equal(typeof config.database, 'string', 'Config is missing a value for database')) {
+    if (!assert.equal(typeof config.database, 'string', 'Config is missing a value for database!')) {
       checked.database = 'ok';
     }
     if (Object.keys(checked).length === 5) {
