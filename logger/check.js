@@ -1,3 +1,4 @@
+const fs = require('fs');
 const assert = require('assert');
 const pg = require('pg');
 const config = require('../config');
@@ -28,11 +29,7 @@ module.exports = {
   },
   schema: (cb) => {
     const goal = ['critical', 'debug', 'error', 'info', 'warning'];
-    const check = `
-      SELECT json_agg(table_name ORDER BY table_name)
-      FROM information_schema.tables
-      WHERE table_schema = 'logs';
-    `;
+    const check = fs.readFileSync('./sql/check-schema.sql', { encoding: 'utf8' });
     const client = new pg.Client(config);
     client.connect(err => {
       if (err) { cb(err); }
