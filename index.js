@@ -1,1 +1,1 @@
-const pg = require('pg');
+module.exports = require('./logger');
