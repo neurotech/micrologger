@@ -6,7 +6,7 @@ CREATE TABLE IF NOT EXISTS logs.critical (
   domain varchar(128),
   task varchar(128),
   message text,
-  message_timestamp timestamp
+  message_timestamp timestamp with time zone
 );
 CREATE TABLE IF NOT EXISTS logs.error (
   error_message_id SERIAL PRIMARY KEY NOT NULL,
@@ -14,7 +14,7 @@ CREATE TABLE IF NOT EXISTS logs.error (
   domain varchar(128),
   task varchar(128),
   message text,
-  message_timestamp timestamp
+  message_timestamp timestamp with time zone
 );
 CREATE TABLE IF NOT EXISTS logs.warning (
   warning_message_id SERIAL PRIMARY KEY NOT NULL,
@@ -22,7 +22,7 @@ CREATE TABLE IF NOT EXISTS logs.warning (
   domain varchar(128),
   task varchar(128),
   message text,
-  message_timestamp timestamp
+  message_timestamp timestamp with time zone
 );
 CREATE TABLE IF NOT EXISTS logs.info (
   info_message_id SERIAL PRIMARY KEY NOT NULL,
@@ -30,7 +30,7 @@ CREATE TABLE IF NOT EXISTS logs.info (
   domain varchar(128),
   task varchar(128),
   message text,
-  message_timestamp timestamp
+  message_timestamp timestamp with time zone
 );
 CREATE TABLE IF NOT EXISTS logs.debug (
   debug_message_id SERIAL PRIMARY KEY NOT NULL,
@@ -38,5 +38,5 @@ CREATE TABLE IF NOT EXISTS logs.debug (
   domain varchar(128),
   task varchar(128),
   message text,
-  message_timestamp timestamp
+  message_timestamp timestamp with time zone
 );
